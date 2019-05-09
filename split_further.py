@@ -23,11 +23,7 @@ def split_further(split_runner):
             if runner not in m2:
                 m2[runner] = 0
             m2[runner] += 1
-            if m2[runner] - 1 > (m[runner] - 1) * 3 / 4:
-                runner = runner + '-4'
-            elif m2[runner] - 1 > (m[runner] - 1) * 2 / 4:
-                runner = runner + '-3'
-            elif m2[runner] - 1 > (m[runner] - 1) * 1 / 4:
+            if m2[runner] - 1 > (m[runner] - 1) /2:
                 runner = runner + '-2'
             l2 += ['runner = \'%s\'' % runner]
         else:
@@ -37,6 +33,7 @@ def split_further(split_runner):
         for x in l2:
             f.write(x + '\n')
 
-split_further('molly4')
 split_further('molly6')
-# TODO
+split_further('sally5')
+split_further('sally6')
+split_further('wilhelm6')
